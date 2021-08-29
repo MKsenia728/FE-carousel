@@ -1,64 +1,89 @@
-.controls  {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.control-pause {
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 0;
-  text-align: center;
-  transition: opacity 0.8s;
-}
-.control-pause:hover, .control-pause:focus {
-  opacity: 1;
-}
-
-.fa-pause-circle, .fa-play-circle {
-  font-size: 250px;
-  color: rgba(255, 255, 255, 0.5);
-  
-  
-  @include sm {
-    font-size: 150px;
-  }
-}
-  
-.control-prev, .control-next {
+.controls
+{
     position: absolute;
     top: 0;
-    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.control-pause
+{
+    position: absolute;
     z-index: 2;
+    top: 50%;
+    left: 50%;
+
+    transition: opacity .8s;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    opacity: 0;
+}
+.control-pause:hover,
+.control-pause:focus
+{
+    opacity: 1;
+}
+
+.fa-pause-circle,
+.fa-play-circle
+{
+    font-size: 250px;
+
+    color: rgba(255, 255, 255, .5);
+
+    @include sm
+    {
+        font-size: 150px;
+    }
+}
+
+.control-prev,
+.control-next
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+
     display: flex;
+
+    transition: font-size .5s, background-color .5s;
+
+    color: rgba(255, 255, 255, .5);
+
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.5);
-    transition: font-size 0.5s, background-color 0.5s;
-  }
-  .control-prev:hover, .control-next:hover,
-  .control-prev:focus, .control-next:focus {
-    font-size: 2.25em;
-    
-  }
-  
-.control-prev {
-   width: 10%;
-   left: 0;
-  }
-.control-prev:focus, .control-prev:hover {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-  }
-  
-.control-next {
-  width: 10%;
-  right: 0;
-
 }
-.control-next:focus, .control-next:hover {
-    background: linear-gradient(to left,  rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+.control-prev:hover,
+.control-next:hover,
+.control-prev:focus,
+.control-next:focus
+{
+    font-size: 2.25em;
+}
+
+.control-prev
+{
+    left: 0;
+
+    width: 10%;
+}
+.control-prev:focus,
+.control-prev:hover
+{
+    background: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+}
+
+.control-next
+{
+    right: 0;
+
+    width: 10%;
+}
+.control-next:focus,
+.control-next:hover
+{
+    background: linear-gradient(to left,  rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
 }
 

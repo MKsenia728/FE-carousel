@@ -1,9 +1,12 @@
 *,
 ::after,
-::before {
-  box-sizing: border-box;
+::before
+{
+    box-sizing: border-box;
 }
-body {
-  margin: 0;
-  font-family: Arial;
+body
+{
+    font-family: Arial;
+
+    margin: 0;
 }
