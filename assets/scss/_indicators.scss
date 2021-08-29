@@ -1,0 +1,31 @@
+.indicators {
+  position: absolute;
+  @include unlist;
+  display: flex;
+  gap: 1em;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 3;
+  
+  > * {
+    height: 20px;
+    width: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s;
+    @include sm {
+      height: 15px;
+      width: 15px;
+      border: 2px solid rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+.indicator.active {
+  box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 1);
+  transform: scale(1.2, 1.2);
+}
